@@ -1260,9 +1260,9 @@ class SeomaticService extends BaseApplicationComponent
         {
             $uri .= $segment;
             $element = craft()->elements->getElementByUri($uri, craft()->language, true);
-            if ($element && $element->uri)
+            if ($element && $element->url)
             {
-                $result[$element->title] = $this->getFullyQualifiedUrl($element->uri);
+                $result[$element->title] = $this->getFullyQualifiedUrl($element->url);
             }
             $uri .= "/";
         }
